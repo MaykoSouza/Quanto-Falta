@@ -60,6 +60,26 @@ i {
    
 }
 
+.time{
+
+    height: 20%;
+    margin-top: 20px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+
+    height: 50px;
+    width: 40px;
+    margin: 3px;
+    border-radius: 4px;
+    background-color: #313131;
+   
+}
+
 .end-date{
     
     margin-top: 30px;
