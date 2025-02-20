@@ -21,7 +21,7 @@ function atualizaRelogio() {
     segundos.textContent = agora.getSeconds().toString().padStart(2, "0")
     dia.textContent = agora.getDate().toString().padStart(2, "0")
     mes.textContent = (agora.getMonth() + 1).toString().padStart(2, "0")
-    ano.textContent = agora.getFullYear()
+    ano.textContent = agora.getFullYear().toString().slice(-2)
 
 }
 
