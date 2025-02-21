@@ -4,8 +4,9 @@ const segundos = document.getElementById("segundos")
 const dia = document.getElementById("dia")
 const mes = document.getElementById("mes")
 const anos = document.getElementById("ano")
-const data = document.getElementById("data")
 const botao = document.getElementById("button")
+
+
 
 
 
@@ -25,6 +26,25 @@ function atualizaRelogio() {
 
 }
 
+function compararDatas(){
+
+    let dataImput = document.getElementById("dataEscolhida").value
+
+    if(!dataImput){
+
+        alert("Escolha uma data!")
+    }
+
+    let dataEscolhida = new Date(dataImput)
+    const dataAtual = new Date()
+
+    dataEscolhida.setDate(0)
+    dataAtual.setDate()
+
+    alert(dataEscolhida - dataAtual)
+
+}
+
 // atualiza o relógio a cada segundo
 setInterval(atualizaRelogio, 1000)
 
@@ -34,6 +54,8 @@ atualizaRelogio()
 
 
 botao.addEventListener("click", () => {
+
+    compararDatas()
 
 
 })
