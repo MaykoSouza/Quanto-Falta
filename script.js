@@ -8,9 +8,6 @@ const botao = document.getElementById("button")
 
 
 
-
-
-
 function atualizaRelogio() {
     // criar um objeto Date a cada chamada 
 
@@ -28,21 +25,44 @@ function atualizaRelogio() {
 
 function compararDatas(){
 
-    let dataImput = document.getElementById("dataEscolhida").value
+    let dataInput = document.getElementById("dataEscolhida").value
 
-    if(!dataImput){
+    if(!dataInput){
 
         alert("Escolha uma data!")
+        return;
+        
     }
 
-    let dataEscolhida = new Date(dataImput)
+/* O objeto Date quando recebe uma string como parâmetro, por padrão o Js converte o horário para UTC, 
+adicionando +"T00:00" forçamos a conversão para data local*/
+
+    let dataEscolhida = new Date(dataInput +"T00:00")
     const dataAtual = new Date()
 
-    dataEscolhida.setDate(0)
-    dataAtual.setDate()
 
-    alert(dataEscolhida - dataAtual)
+    if(dataEscolhida < dataAtual){
 
+        alert("Escolha uma data Futura")
+        return;
+
+    }
+
+    const diferencaMS = (dataEscolhida - dataAtual) 
+    const diferencaDias = diferencaMS /(1000 * 60 * 60 * 24)
+
+
+}
+
+function mostrarDados(){
+
+   const containerPassword = document.querySelector("#container-password");
+    containerPassword.classList.remove("hide")
+
+    const password = document.querySelector("#password");
+    
+
+     
 }
 
 // atualiza o relógio a cada segundo
@@ -53,10 +73,11 @@ setInterval(atualizaRelogio, 1000)
 atualizaRelogio()
 
 
+
 botao.addEventListener("click", () => {
 
     compararDatas()
-
+    mostrarDados()
 
 })
 

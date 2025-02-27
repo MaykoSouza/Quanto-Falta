@@ -72,10 +72,11 @@ i {
 }
 
 .card{
+
     display: flex;
     align-items: center;
-    height: 50px;
-    width: 40px;
+    height: 80px;
+    width: 60px;
     margin: 3px;
     border-radius: 4px;
     background-color: #313131;
@@ -84,7 +85,7 @@ i {
 
 .card p{
 
-    font-size: 20px;
+    font-size: 30px;
     
 }
 .end-date{
@@ -149,6 +150,7 @@ i {
     border: 1px solid #313131;
     transition: transform 0.5s;
     display: flex;
+    
 }
 
 .password:hover {
