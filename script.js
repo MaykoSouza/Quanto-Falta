@@ -29,7 +29,7 @@ function compararDatas(){
 
     if(!dataInput){
 
-        alert("Escolha uma data!")
+        alert("Escolha uma data válida!")
         return;
         
     }
@@ -49,20 +49,29 @@ adicionando +"T00:00" forçamos a conversão para data local*/
     }
 
     const diferencaMS = (dataEscolhida - dataAtual) 
-    const diferencaDias = diferencaMS /(1000 * 60 * 60 * 24)
+    const diferencaDias = diferencaMS /(1000 * 60 * 60 * 24 )
+    const diferencaHoras = diferencaMS /(1000 * 60 * 60)
+    const diferencaMinutos = diferencaMS /(1000 * 60)
 
-
+    return{
+        dias: Math.floor(diferencaDias),
+        horas: Math.floor(diferencaHoras % 24),
+        minutos: Math.floor(diferencaMinutos % 60)
+    }
 }
 
 function mostrarDados(){
 
-   const containerPassword = document.querySelector("#container-password");
+
+
+    const resultado = compararDatas()
+
+    const containerPassword = document.querySelector("#container-password");
     containerPassword.classList.remove("hide")
 
     const password = document.querySelector("#password");
+    password.innerHTML = ` ${resultado.dias} Dias ${resultado.horas} horas e ${resultado.minutos} Minutos ` 
     
-
-     
 }
 
 // atualiza o relógio a cada segundo
@@ -78,6 +87,7 @@ botao.addEventListener("click", () => {
 
     compararDatas()
     mostrarDados()
+
 
 })
 
