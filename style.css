@@ -26,7 +26,7 @@ body {
     color: #ffffff;
     width: 100%;
     display: flex;
-    text-align: center;
+    text-align:center;
     font-size: 33px;
 }
 
@@ -34,7 +34,6 @@ body {
     font-family: 'Righteous', sans-serif;
     display: flex;
     align-items: center;
-    text-align: end;
     justify-content: center;
 }
 
@@ -150,7 +149,7 @@ i {
     border: 1px solid #313131;
     transition: transform 0.5s;
     display: flex;
-    
+
 }
 
 .password:hover {
