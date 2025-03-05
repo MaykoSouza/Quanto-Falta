@@ -29,21 +29,18 @@ function compararDatas(){
 
     if(!dataInput){
 
-        alert("Escolha uma data válida!")
-        return;
+      
         
     }
-    if(dataInput > "01/01/3000"){
-
-        alert("Infelizmente acredito que você não estará mais vivo")
-        return;
-    }
+    
+    
 
 /* O objeto Date quando recebe uma string como parâmetro, por padrão o Js converte o horário para UTC, 
 adicionando +"T00:00" forçamos a conversão para data local*/
 
     let dataEscolhida = new Date(dataInput +"T00:00")
     const dataAtual = new Date()
+    const dataMaxima = new Date("3000-01-01")
 
 
     if(dataEscolhida < dataAtual){
@@ -51,6 +48,11 @@ adicionando +"T00:00" forçamos a conversão para data local*/
         alert("Escolha uma data Futura")
         return;
 
+    }
+    if(dataEscolhida >= dataMaxima){
+
+        alert("Maurício kkkkkkkkk você  estará mais vivo")
+        return;
     }
 
     const diferencaMS = (dataEscolhida - dataAtual) 
