@@ -60,11 +60,12 @@ adicionando +"T00:00" forçamos a conversão para data local*/
     }
 }
 
-function mostrarDados(){
+function mostrarDados(resultado){
 
+    if(!compararDatas()){
 
-
-    const resultado = compararDatas()
+        return;
+    }
 
     const containerPassword = document.querySelector("#container-password");
     containerPassword.classList.remove("hide")
@@ -85,8 +86,10 @@ atualizaRelogio()
 
 botao.addEventListener("click", () => {
 
-    compararDatas()
-    mostrarDados()
+
+    const resultado = compararDatas()
+    if(!resultado) return;
+    mostrarDados(resultado)
 
 
 })
