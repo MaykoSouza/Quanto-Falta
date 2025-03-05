@@ -33,6 +33,11 @@ function compararDatas(){
         return;
         
     }
+    if(dataInput > "01/01/3000"){
+
+        alert("Infelizmente acredito que você não estará mais vivo")
+        return;
+    }
 
 /* O objeto Date quando recebe uma string como parâmetro, por padrão o Js converte o horário para UTC, 
 adicionando +"T00:00" forçamos a conversão para data local*/
