@@ -29,18 +29,17 @@ function compararDatas(){
 
     if(!dataInput){
 
-      
+      return;
         
     }
-    
-    
 
-/* O objeto Date quando recebe uma string como parâmetro, por padrão o Js converte o horário para UTC, 
-adicionando +"T00:00" forçamos a conversão para data local*/
+    /* O objeto Date quando recebe uma string como parâmetro, por padrão o Js converte o horário para UTC, 
+    adicionando +"T00:00" forçamos a conversão para data local*/
 
-    let dataEscolhida = new Date(dataInput +"T00:00")
+    const ano = parseInt(dataInput.split("-")[0])
+    const dataEscolhida = new Date(dataInput +"T00:00")
     const dataAtual = new Date()
-    const dataMaxima = new Date("3000-01-01")
+    const anoMaximo = 5000
 
 
     if(dataEscolhida < dataAtual){
@@ -49,12 +48,13 @@ adicionando +"T00:00" forçamos a conversão para data local*/
         return;
 
     }
-    if(dataEscolhida >= dataMaxima){
+    if(ano > anoMaximo){
 
-        alert("Maurício kkkkkkkkk você  estará mais vivo")
-        return;
+        alert("Escolha um ano menor que 5000")
+        return
+
     }
-
+  
     const diferencaMS = (dataEscolhida - dataAtual) 
     const diferencaDias = diferencaMS /(1000 * 60 * 60 * 24 )
     const diferencaHoras = diferencaMS /(1000 * 60 * 60)
@@ -82,14 +82,6 @@ function mostrarDados(resultado){
     
 }
 
-// atualiza o relógio a cada segundo
-setInterval(atualizaRelogio, 1000)
-
-
-//chamando a função assim que a página é recarregada
-atualizaRelogio()
-
-
 
 botao.addEventListener("click", () => {
 
@@ -101,4 +93,10 @@ botao.addEventListener("click", () => {
 
 })
 
+// atualiza o relógio a cada segundo
+setInterval(atualizaRelogio, 1000)
+
+
+//chamando a função assim que a página é recarregada
+atualizaRelogio()
 
