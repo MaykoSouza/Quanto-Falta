@@ -29,6 +29,8 @@ function compararDatas(){
 
     if(!dataInput){
 
+        alert("teste")
+
       return;
         
     }
