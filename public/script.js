@@ -29,14 +29,14 @@ function compararDatas(){
 
     if(!dataInput){
 
-        alert("teste")
+        alert("Insira uma data")
 
       return;
         
     }
 
-    /* O objeto Date quando recebe uma string como parâmetro, por padrão o Js converte o horário para UTC, 
-    adicionando +"T00:00" forçamos a conversão para data local*/
+    /* O objeto Date quando recebe uma string como parâmetro, por padrão o Js converte o horário para UTC.
+    Adicionando +"T00:00" forçamos a conversão para data local*/
 
     const ano = parseInt(dataInput.split("-")[0])
     const dataEscolhida = new Date(dataInput +"T00:00")
@@ -79,8 +79,8 @@ function mostrarDados(resultado){
     const containerPassword = document.querySelector("#container-password");
     containerPassword.classList.remove("hide")
 
-    const password = document.querySelector("#password");
-    password.innerHTML = ` ${resultado.dias} Dias ${resultado.horas} horas e ${resultado.minutos} Minutos ` 
+    const finishresult = document.querySelector("#password");
+    finishresult.innerHTML = ` ${resultado.dias} Dias ${resultado.horas} horas e ${resultado.minutos} Minutos ` 
     
 }
 
