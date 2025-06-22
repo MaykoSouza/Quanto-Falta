@@ -5,5 +5,5 @@ COPY public/ /usr/share/nginx/html/
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "deamon off;"]
+CMD ["nginx", "-g", "daemon off;"]
 #'deamon off faz com que o nginx rode em primeiro plano 
