@@ -3,7 +3,7 @@ FROM nginx:alpine
 
 COPY public/ /usr/share/nginx/html/
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
 #'deamon off faz com que o nginx rode em primeiro plano 
