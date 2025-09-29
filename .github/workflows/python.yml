@@ -17,7 +17,7 @@ jobs:
       
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
-       with:
+        with:
          python-version: ${{ matrix.python-version }}
       
       # You can test your matrix by printing the current Python version
