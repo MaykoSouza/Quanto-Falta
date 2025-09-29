@@ -57,7 +57,7 @@ Você só precisa de um navegador da web para abrir o arquivo `index.html`.
 
 ## Melhorias Futuras (Possíveis Aprimoramentos)
 
-* Adicionar um temporizador de contagem regressiva visual que se atualize automaticamente após a seleção de uma data.
+* Adicionar um temporizador de contagem regressiva visual que se atualize automaticamente após a seleção de uma data .
 * Implementar uma validação de data mais robusta (por exemplo, impedindo formatos de data inválidos).
 * Permitir que os usuários limpem a data selecionada.
 * Melhorar a interface do usuário e adicionar mais animações.
